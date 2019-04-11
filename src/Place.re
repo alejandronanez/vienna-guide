@@ -1,7 +1,7 @@
 [@react.component]
 let make = (~name, ~placeType) => {
   let t =
-    switch (placeType) {
+    switch ((placeType: Data.placeType)) {
     | Data.Museum => "Museum"
     | Data.Cafe => "Cafe"
     };

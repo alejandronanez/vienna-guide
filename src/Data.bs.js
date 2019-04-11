@@ -72,14 +72,21 @@ function getNamesFromPlaces(place) {
 
 var getPlacesNames = $$Array.of_list(Belt_List.map(places, getNamesFromPlaces));
 
-function searchPlaces(places, term) {
+function searchPlacesByTerm(places, term) {
   return Belt_List.keep(places, (function (place) {
                 return place[/* name */1].toLowerCase().includes(term.toLowerCase());
+              }));
+}
+
+function searchPlacesByCategory(places, category) {
+  return Belt_List.keep(places, (function (place) {
+                return place[/* placeType */8] === category;
               }));
 }
 
 exports.places = places;
 exports.getNamesFromPlaces = getNamesFromPlaces;
 exports.getPlacesNames = getPlacesNames;
-exports.searchPlaces = searchPlaces;
+exports.searchPlacesByTerm = searchPlacesByTerm;
+exports.searchPlacesByCategory = searchPlacesByCategory;
 /* getPlacesNames Not a pure module */

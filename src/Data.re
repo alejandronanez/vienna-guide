@@ -13,6 +13,11 @@ type placeType =
   | Museum
   | Cafe;
 
+type visibilityFilter =
+  | Museum
+  | Cafe
+  | All;
+
 type place = {
   id: string,
   name: string,
@@ -86,10 +91,12 @@ let places = [
 
 let getNamesFromPlaces = place => place.name;
 let getPlacesNames = places->Belt.List.map(getNamesFromPlaces)->Array.of_list;
-let searchPlaces = (places, term) =>
+let searchPlacesByTerm = (places, term) =>
   Belt.List.keep(places, place =>
     Js.String.includes(
       Js.String.toLowerCase(term),
       Js.String.toLowerCase(place.name),
     )
   );
+let searchPlacesByCategory = (places, category) =>
+  Belt.List.keep(places, place => place.placeType === category);
