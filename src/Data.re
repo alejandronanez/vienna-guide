@@ -9,6 +9,10 @@ type coordinates = {
   lng: float,
 };
 
+type placeType =
+  | Museum
+  | Cafe;
+
 type place = {
   id: string,
   name: string,
@@ -18,6 +22,7 @@ type place = {
   email: option(string),
   address: string,
   coordinates,
+  placeType,
 };
 
 let places = [
@@ -37,6 +42,7 @@ let places = [
       lat: 48.186272,
       lng: 16.309719,
     },
+    placeType: Museum,
   },
   {
     id: "675a1180-62cc-4518-b272-a0e1beeaf868",
@@ -54,6 +60,7 @@ let places = [
       lat: 48.199153,
       lng: 16.351044,
     },
+    placeType: Cafe,
   },
   {
     id: "873da18c-4eb4-4cd1-8edf-d0bcc5776127",
@@ -71,6 +78,7 @@ let places = [
       lat: 48.204062,
       lng: 16.368852,
     },
+    placeType: Museum,
   },
 ];
 

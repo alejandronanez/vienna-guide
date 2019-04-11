@@ -3,14 +3,15 @@
 
 var React = require("react");
 
-function Place(Props) {
+function Pill(Props) {
   var name = Props.name;
-  var placeType = Props.placeType;
-  var t = placeType ? "Cafe" : "Museum";
-  return React.createElement("p", undefined, name + (" / " + t));
+  var onClick = Props.onClick;
+  return React.createElement("div", {
+              onClick: onClick
+            }, name);
 }
 
-var make = Place;
+var make = Pill;
 
 exports.make = make;
 /* react Not a pure module */

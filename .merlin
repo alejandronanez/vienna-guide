@@ -1,8 +1,8 @@
 ####{BSB GENERATED: NO EDIT
 B lib/bs
 FLG -open ReactHooksTemplate
-FLG -ppx '/Users/alejandro/.nvm/versions/node/v8.12.0/lib/node_modules/bs-platform/lib/reactjs_jsx_ppx_3.exe'
-FLG -ppx /Users/alejandro/.nvm/versions/node/v8.12.0/lib/node_modules/bs-platform/lib/bsppx.exe
+FLG -ppx '/Users/alejandro/code/reasonconf/reason-react/node_modules/bs-platform/lib/reactjs_jsx_ppx_3.exe'
+FLG -ppx /Users/alejandro/code/reasonconf/reason-react/node_modules/bs-platform/lib/bsppx.exe
 S /Users/alejandro/code/reasonconf/reason-react/node_modules/bs-platform/lib/ocaml
 B /Users/alejandro/code/reasonconf/reason-react/node_modules/bs-platform/lib/ocaml
 FLG -nostdlib -color always

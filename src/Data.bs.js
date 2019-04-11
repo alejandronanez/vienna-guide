@@ -20,7 +20,8 @@ var places = /* :: */[
     /* coordinates : record */[
       /* lat */48.186272,
       /* lng */16.309719
-    ]
+    ],
+    /* placeType : Museum */0
   ],
   /* :: */[
     /* record */[
@@ -38,7 +39,8 @@ var places = /* :: */[
       /* coordinates : record */[
         /* lat */48.199153,
         /* lng */16.351044
-      ]
+      ],
+      /* placeType : Cafe */1
     ],
     /* :: */[
       /* record */[
@@ -56,7 +58,8 @@ var places = /* :: */[
         /* coordinates : record */[
           /* lat */48.204062,
           /* lng */16.368852
-        ]
+        ],
+        /* placeType : Museum */0
       ],
       /* [] */0
     ]

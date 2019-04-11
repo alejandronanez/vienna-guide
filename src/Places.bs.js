@@ -19,7 +19,8 @@ function Places(Props) {
                             return React.createElement("li", {
                                         key: place[/* id */0]
                                       }, React.createElement(Place$ReactHooksTemplate.make, {
-                                            name: place[/* name */1]
+                                            name: place[/* name */1],
+                                            placeType: place[/* placeType */8]
                                           }));
                           })))));
 }

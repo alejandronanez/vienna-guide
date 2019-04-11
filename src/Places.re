@@ -9,7 +9,9 @@ let make = () => {
       {Data.places
        ->Data.searchPlaces(searchTerm)
        ->Belt.List.map(place =>
-           <li key={place.id}> <Place name={place.name} /> </li>
+           <li key={place.id}>
+             <Place name={place.name} placeType={place.placeType} />
+           </li>
          )
        ->Belt.List.toArray
        ->React.array}
