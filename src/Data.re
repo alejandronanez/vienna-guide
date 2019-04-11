@@ -98,5 +98,13 @@ let searchPlacesByTerm = (places, term) =>
       Js.String.toLowerCase(place.name),
     )
   );
-let searchPlacesByCategory = (places, category) =>
-  Belt.List.keep(places, place => place.placeType === category);
+let searchPlacesByCategory = (places, category) => {
+  let result =
+    switch (category) {
+    | Museum => Belt.List.keep(places, place => place.placeType === Museum)
+    | Cafe => Belt.List.keep(places, place => place.placeType === Cafe)
+    | All => places
+    };
+
+  result;
+};

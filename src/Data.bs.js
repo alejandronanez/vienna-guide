@@ -79,9 +79,19 @@ function searchPlacesByTerm(places, term) {
 }
 
 function searchPlacesByCategory(places, category) {
-  return Belt_List.keep(places, (function (place) {
-                return place[/* placeType */8] === category;
-              }));
+  switch (category) {
+    case 0 : 
+        return Belt_List.keep(places, (function (place) {
+                      return place[/* placeType */8] === /* Museum */0;
+                    }));
+    case 1 : 
+        return Belt_List.keep(places, (function (place) {
+                      return place[/* placeType */8] === /* Cafe */1;
+                    }));
+    case 2 : 
+        return places;
+    
+  }
 }
 
 exports.places = places;
